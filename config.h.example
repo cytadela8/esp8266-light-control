@@ -1,0 +1,13 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#define WIFI_SSID "WIFI_NAME"
+#define WIFI_PSK  "WIFI_PASSWORD"
+
+#define UPDATE_USERNAME "admin"
+#define UPDATE_PASSWORD "CHANGE_ME"
+
+#define LAMP_OUT 4  // set to relay pin
+#define SWITCH_IN 5  // set to wall switch sensor
+
+#endif
