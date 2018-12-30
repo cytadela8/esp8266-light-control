@@ -1,0 +1,8 @@
+#ifndef LAMPSWITCHAPP_FLASH_CONFIG_CHECK_H
+#define LAMPSWITCHAPP_FLASH_CONFIG_CHECK_H
+
+#include <Arduino.h>
+
+String& flashChipConfigCheck();
+
+#endif //LAMPSWITCHAPP_FLASH_CONFIG_CHECK_H
