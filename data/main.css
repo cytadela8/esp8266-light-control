@@ -1,0 +1,65 @@
+.content {
+    max-width: 800pt;
+    margin: auto;
+}
+
+img.logo {
+    width: 100pt;
+    max-width: 30%;
+    margin-top: 2pt;
+    margin-bottom: 15pt;
+}
+
+.lamp-button {
+    background-color: #23691b;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #20c731;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 23px;
+    font-weight: bold;
+    padding: 22pt;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #000000;
+    width: 200pt;
+    max-width: 60%;
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+}
+
+.lamp-button:hover {
+    background-color: #038a05;
+}
+
+.lamp-button:active {
+    position: relative;
+    top: 1px;
+}
+
+.lamp-button:disabled {
+    background-color: #1db32c
+}
+
+body {
+    background-color: #100e1d;
+    text-align: center;
+    color: #ffffff;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    margin-bottom: 5pt;
+    color: #7f7f7f;
+}
+
+.credits {
+    font-size: small;
+}

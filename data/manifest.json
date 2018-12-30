@@ -1,11 +1,22 @@
 {
   "short_name": "Żarówka",
   "name": "Sterowanie Żarówką",
-  "icons": [],
+  "icons": [
+    {
+      "src": "icon192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
   "start_url": "/",
-  "background_color": "#AAAAAA",
+  "background_color": "#100e1d",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#3333FF"
+  "theme_color": "#23691b"
 }
 
