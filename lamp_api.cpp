@@ -20,6 +20,8 @@ void LampAPI::handleLamp() {
     controller->setState(true);
   else if (t_state == "OFF")
     controller->setState(false);
+  else if (t_state == "TOGGLE")
+    controller->toggleLamp();
 
   handleGetState();
 }
@@ -41,6 +43,9 @@ void LampAPI::handleGetState() {
 
   response += ", \"switchLastChange\": ";
   response += controller->getSwitchLastChange();
+  
+  response += ", \"systemTime\": ";
+  response += millis();
 
   response += "}";
   server->send(200, "application/json", response);

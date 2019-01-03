@@ -17,7 +17,7 @@ void LampController::update() {
   int newSwitchState = digitalRead(switch_in);
   if (switchLastState != newSwitchState && lastSwitchChange + 500 < millis()) {
     lastSwitchChange = millis();
-    handleSwitchToggled();
+    toggleLamp();
     switchLastState = newSwitchState;
   }
 }
@@ -33,6 +33,6 @@ void LampController::setState(bool newState) {
   }
 }
 
-void LampController::handleSwitchToggled() {
+void LampController::toggleLamp() {
   setState(!getState());
 }
