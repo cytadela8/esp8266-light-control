@@ -4,6 +4,8 @@ This is a code repository for my lamp switch project. Aim of this project is to 
 No central server or cloud is required for operation of my module.
 My module is also fails safe. Failure of the module results in the relay staying in closed position allowing for light operation by turing on/off module power supply.
 
+## ![Results](#results)
+
 ## Hardware components used
 
 - [ESP12-F board (ESP8266)](https://www.aliexpress.com/item/1000001794160.html)
@@ -14,7 +16,9 @@ My module is also fails safe. Failure of the module results in the relay staying
 
 Total price: ~7USD (excluding wall switch)
 
-## Hardware schema **TODO**
+## Hardware schema
+
+![](images/schema.jpg)
 
 ## Building software
 
@@ -86,3 +90,11 @@ Content-Type: application/json
     "systemTime": 167647811
 }
 ```
+
+## Results
+
+![](images/img1.jpg) 
+
+![](images/img2.jpg) 
+
+![](images/screenshot.jpg)
