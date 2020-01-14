@@ -6,11 +6,13 @@ My module is also fails safe. Failure of the module results in the relay staying
 
 ## Hardware components used
 
-- ESP12-F board (ESP8266)
-- 3V relay
-- 3.3V power supply
-- AC power detector
-- Wall switch with 2 outputs
+- [ESP12-F board (ESP8266)](https://www.aliexpress.com/item/1000001794160.html)
+- [3V relay](https://www.aliexpress.com/item/32811523122.html)
+- [3.3V power supply](https://www.aliexpress.com/item/32584176181.html)
+- [AC power detector](https://www.aliexpress.com/item/32719921989.html)
+- Wall switch with 2 controlable outputs
+
+Total price: ~7USD (excluding wall switch)
 
 ## Hardware schema **TODO**
 
@@ -41,7 +43,7 @@ This is a Web Progressive App and works nicely when added to Home Screen on Andr
 
 ### HTTP `/update`
 
-Update API. Allows for updating app image and SPIFFS image after authorization. See [config](#config)
+Allows for updating app image and SPIFFS image after authorization. See [config](#config)
 
 ## API
 
