@@ -4,7 +4,7 @@ This is a code repository for my lamp switch project. Aim of this project is to 
 No central server or cloud is required for operation of my module.
 My module is also fails safe. Failure of the module results in the relay staying in closed position allowing for light operation by turing on/off module power supply.
 
-## [Results](#results)
+## [Results](#results-1)
 
 ## Hardware components used
 
