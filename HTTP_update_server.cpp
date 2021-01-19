@@ -54,10 +54,10 @@ void HTTPUpdateServer::setup(ESP8266WebServer *server, const String &username,
 
   _server->on("/update/spiffs", HTTP_POST,
               [&]() {
-                handlePOSTFinish(U_SPIFFS);
+                handlePOSTFinish(U_FS);
               },
               [&]() {
-                handlePOSTData(U_SPIFFS);
+                handlePOSTData(U_FS);
               });
 }
 

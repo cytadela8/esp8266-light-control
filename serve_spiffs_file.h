@@ -2,8 +2,7 @@
 #define LAMPSWITCHAPP_SERVE_SPIFFS_FILE_H
 
 #include <Arduino.h>
-
-class ESP8266WebServer;
+#include <ESP8266WebServer.h>
 
 void serveSPIFFSFile(ESP8266WebServer &server, String path);
 

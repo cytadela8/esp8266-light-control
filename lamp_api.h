@@ -1,9 +1,8 @@
 #ifndef LAMP_API_H
 #define LAMP_API_H
 
+#include <ESP8266WebServer.h>
 #include "lamp_controller.h"
-
-class ESP8266WebServer;
 
 class LampAPI {
 public:
