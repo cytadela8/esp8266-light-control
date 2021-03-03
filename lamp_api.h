@@ -13,6 +13,8 @@ private:
 
   void handleGetState();
 
+  void handleAntiNoise();
+
   ESP8266WebServer *server;
   LampController *controller;
 };

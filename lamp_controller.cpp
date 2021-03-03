@@ -20,19 +20,32 @@ void LampController::update() {
     toggleLamp();
     switchLastState = newSwitchState;
   }
+  if (lampState == HIGH && antiNoise && lastPulse + 4000 < millis()) {
+    digitalWrite(lamp_out, LOW);
+    delay(pulseLen);
+    digitalWrite(lamp_out, HIGH);
+    lastPulse = millis();
+  }
 }
-
 
 void LampController::setState(bool newState) {
   if (newState) {
-    digitalWrite(lamp_out, HIGH); //relay OFF
+    digitalWrite(lamp_out, HIGH);  // relay OFF
     lampState = HIGH;
   } else {
-    digitalWrite(lamp_out, LOW); //relay ON
+    digitalWrite(lamp_out, LOW);  // relay ON
     lampState = LOW;
   }
 }
 
 void LampController::toggleLamp() {
   setState(!getState());
+}
+
+void LampController::setAntiNoise(bool newState) {
+  antiNoise = newState;
+}
+
+void LampController::setAntiNoisePulseLen(int pulseLen) {
+  this->pulseLen = pulseLen;
 }

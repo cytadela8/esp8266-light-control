@@ -25,6 +25,18 @@ public:
     return lastSwitchChange;
   }
 
+  void setAntiNoise(bool newState);
+
+  void setAntiNoisePulseLen(int pulseLen);
+
+  inline bool getAntiNoise() const {
+    return antiNoise;
+  }
+
+  inline int getAntiNoisePulseLen() const {
+    return pulseLen;
+  }
+
   void toggleLamp();
 
 private:
@@ -35,6 +47,9 @@ private:
   int lampState = HIGH;
   int switchLastState = LOW;
   unsigned int lastSwitchChange = 0;
+  unsigned int lastPulse = 0;
+  bool antiNoise = false;
+  int pulseLen = 1;
 };
 
 #endif

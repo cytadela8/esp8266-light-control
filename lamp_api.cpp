@@ -8,6 +8,9 @@ void LampAPI::setup(ESP8266WebServer *server, LampController *controller) {
   server->on("/setLamp", [&]() {
     handleLamp();
   });
+  server->on("/setAntiNoise", [&]() {
+    handleAntiNoise();
+  });
   server->on("/getState", [&]() {
     handleGetState();
   });
@@ -26,6 +29,21 @@ void LampAPI::handleLamp() {
   handleGetState();
 }
 
+void LampAPI::handleAntiNoise() {
+  String q = server->arg("q");
+  if (q == "ON")
+    controller->setAntiNoise(true);
+  else if (q == "OFF")
+    controller->setAntiNoise(false);
+  else if (q == "PULSE") {
+    String len = server->arg("len");
+    controller->setAntiNoisePulseLen(atoi(len.c_str()));
+  }
+  
+  handleGetState();
+}
+
+
 void LampAPI::handleGetState() {
   String response = "{";
 
@@ -40,6 +58,15 @@ void LampAPI::handleGetState() {
   } else {
     response += ", \"switch\": \"OFF\"";
   }
+
+  if (controller->getAntiNoise()) {
+    response += ", \"antiNoise\": \"ON\"";
+  } else {
+    response += ", \"antiNoise\": \"OFF\"";
+  }
+
+  response += ", \"antiNoisePulseLen\":";
+  response += controller->getAntiNoisePulseLen();
 
   response += ", \"switchLastChange\": ";
   response += controller->getSwitchLastChange();
